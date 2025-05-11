@@ -1,0 +1,51 @@
+* {
+	font-size: 14pt;
+	font-family: "Calibri Light";
+}
+
+body {
+	background-color: rgb(246, 246, 246);
+}
+p {
+	margin: 0 0;
+	margin-bottom: 5px;
+}
+p.gray {
+	color: rgb(138, 138, 138);
+}
+
+fieldset {
+	display: block;
+	width: 500px;
+	margin: 50px auto;
+	text-align: center;
+}
+legend {
+	margin: 0 auto;justify-content: center;
+	margin-bottom: 20px;
+	text-align: center;
+}
+a {
+	text-decoration: none;
+	color: rgb(0, 120, 215);
+}
+input, select {
+	margin-bottom: 15px;
+	max-width: 200px;
+}
+button {
+	margin: 0 15px;
+	background-color: orange;
+	border: none;
+	font-family: "Calibri";
+	border-radius: 5px;
+	padding: 5px 20px;
+}
+button:hover {
+	cursor: pointer;
+}
+.flexbox {
+	  display: flex;
+      justify-content: space-around;
+	  align-items: center;
+}
