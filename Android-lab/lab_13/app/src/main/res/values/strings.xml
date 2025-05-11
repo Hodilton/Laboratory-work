@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">lab_13</string>
+
+    <string name="activity_auth_email">Email</string>
+    <string name="activity_auth_password">Password</string>
+    <string name="activity_auth_sign_up">Sign up</string>
+
+    <string name="activity_register_login">Login</string>
+    <string name="activity_register_new_to_here">New to here?</string>
+    <string name="activity_login_username">Username</string>
+
+    <string name="activity_chat_type_your_message">Type your message...</string>
+    <string name="activity_register_password_confirm">Confirm Password</string>
+    <string name="activity_register_remember_me">Remember Me</string>
+    <string name="activity_register_birthday">Birthday (dd.MM.yyyy)</string>
+    <string name="activity_register_phone">Phone (+7 (XXX) XXX-XX-XX)</string>
+
+</resources>
