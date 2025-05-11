@@ -1,0 +1,102 @@
+* {
+    font-family: "Calibri Light", serif;
+}
+
+.top-menu {
+    background-color: #8B9E14;
+    padding: 0;
+}
+
+.top-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.top-menu ul li {
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+}
+
+.top-menu ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.top-menu ul li a:hover {
+    background-color: #C21F31;
+}
+
+.top-menu .submenu {
+    font-family: "Calibri", serif;
+    display: none;
+    position: absolute;
+    background-color: #779010;
+    top: 100%;
+    left: 0;
+    padding: 0;
+}
+
+.top-menu ul li:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    width: 200px;
+}
+
+.submenu li a:hover {
+    background-color: #C21F31;
+}
+
+.side-menu {
+    position: absolute;
+    display: none;
+    background-color: #4C4C4C;
+}
+
+.side-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.side-menu ul li {
+    position: relative;
+    background-color: #4C4C4C;
+}
+
+.side-menu ul li a {
+    display: block;
+    padding: 8px 16px;
+    color: white;
+    text-decoration: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #EEEEEE;
+}
+
+.side-menu ul li a:hover {
+    background-color: #A7A7A7;
+}
+
+.side-menu .submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #4C4C4C;
+}
+
+.side-menu ul li:hover .submenu {
+    display: block;
+}
+
+.side-menu .submenu li a:hover {
+    background-color: #A7A7A7;
+}

@@ -1,0 +1,116 @@
+* {
+    text-align: center;
+    font-family: "Arial", serif;
+    font-size: 13px;
+    box-sizing: border-box;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 4% 12%;
+    background-color: #c9dde8;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+p {
+    color: #777777;
+    padding-bottom: 15px;
+    padding-top: 0.5em;
+}
+
+#title {
+    color: white;
+    padding-bottom: 30px;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 30px;
+    width: 250px;
+    height: 480px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #eeeeee;
+    filter: grayscale(80%);
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+.name {
+    font-size: 28px;
+    margin-top: -10px;
+    padding-bottom: 10px;
+}
+
+.price {
+    color: #e7675a;
+}
+
+.number {
+    color: black;
+    font-weight: bold;
+}
+
+button {
+    border-radius: 5px;
+    margin-top: 35px;
+    height: 50px;
+    width: 183px;
+    font-weight: bold;
+    color: white;
+    background-color: #e7675a;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: none;
+}
+
+.card:hover {
+    cursor: default;
+    transform: scale(1.05);
+    opacity: 1;
+    filter: grayscale(0%);
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.card:active {
+    transform: scale(1);
+    box-shadow: none;
+}
+.badge {
+    position: absolute;
+    top: -35px;
+    left: 170px;
+    background-color: #e7675a;
+    color: white;
+    height: 30px;
+    width: 120px;
+    font-weight: bold;
+    font-size: 11px;
+    text-align: center;
+    line-height: 30px;
+    transform: rotate(45deg);
+    transform-origin: left bottom;
+}
