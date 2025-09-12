@@ -1,0 +1,15 @@
+.user-list {
+    padding: 1rem;
+}
+
+.users-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+@media (max-width: 600px) {
+    .users-container {
+        grid-template-columns: 1fr;
+    }
+}
