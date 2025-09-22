@@ -3,23 +3,19 @@
 #include <chrono>
 #include <mutex>
 
-int counter1 = 1;        // Counter for first stream
-int counter2 = 1;        // Counter for second stream
-bool turn = true;        // Thread queue (true - first thread, false - second)
-int numbersToPrint1 = 1; // The number of numbers to output by first stream
-int numbersToPrint2 = 1; // The number of numbers to output by second stream
-std::mutex mtx;          // Mutex for sync
+int counter1        = 1;    // Counter for first stream
+int counter2        = 1;    // Counter for second stream
+bool turn           = true; // Thread queue (true - first thread, false - second)
+int numbersToPrint1 = 1;    // The number of numbers to output by first stream
+int numbersToPrint2 = 1;    // The number of numbers to output by second stream
+std::mutex mtx;             // Mutex for sync
 
-void threadFirstFunction()
-{
-    while (counter1 <= 100)
-    {
+void threadFirstFunction() {
+    while (counter1 <= 100) {
         std::lock_guard<std::mutex> lock(mtx);
 
-        if (turn)
-        {
-            for (int i = 0; i < numbersToPrint1 && counter1 <= 100; i++)
-            {
+        if (turn) {
+            for (int i = 0; i < numbersToPrint1 && counter1 <= 100; i++) {
                 std::cout << counter1 << " ";
                 counter1++;
             }
@@ -34,16 +30,12 @@ void threadFirstFunction()
     }
 }
 
-void threadSecondFunction()
-{
-    while (counter2 <= 100)
-    {
+void threadSecondFunction() {
+    while (counter2 <= 100) {
         std::lock_guard<std::mutex> lock(mtx);
 
-        if (!turn)
-        {
-            for (int i = 0; i < numbersToPrint2 && counter2 <= 100; i++)
-            {
+        if (!turn) {
+            for (int i = 0; i < numbersToPrint2 && counter2 <= 100; i++) {
                 std::cout << counter2 << " ";
                 counter2++;
             }
@@ -58,8 +50,7 @@ void threadSecondFunction()
     }
 }
 
-int main()
-{
+int main() {
     std::thread thread1(threadFirstFunction);
     std::thread thread2(threadSecondFunction);
 

@@ -1,18 +1,15 @@
 #include <iostream>
 #include <thread>
 
-void quickSort(int arr[], int start, int end)
-{
+void quickSort(int arr[], int start, int end) {
     if (start >= end)
         return;
 
     int anchor = arr[end];
     int i = start - 1;
 
-    for (int j = start; j < end; j++)
-    {
-        if (arr[j] <= anchor)
-        {
+    for (int j = start; j < end; j++) {
+        if (arr[j] <= anchor) {
             i++;
 
             int temp = arr[i];
@@ -31,18 +28,15 @@ void quickSort(int arr[], int start, int end)
     quickSort(arr, anchorIndex + 1, end);
 }
 
-void printArray(int arr[], int size, const std::string &message)
-{
+void printArray(int arr[], int size, const std::string& message) {
     std::cout << message;
-    for (int i = 0; i < size; i++)
-    {
+    for (int i = 0; i < size; i++) {
         std::cout << arr[i] << " ";
     }
     std::cout << std::endl;
 }
 
-int main()
-{
+int main() {
     const int size = 10;
     int array[size] = {5, 34, 57, 86, 3, 87, 43, 25, 11, 14};
 
