@@ -6,21 +6,21 @@ void quickSort(int arr[], int start, int end) {
         return;
 
     int anchor = arr[end];
-    int i = start - 1;
+    int i      = start - 1;
 
     for (int j = start; j < end; j++) {
         if (arr[j] <= anchor) {
             i++;
 
             int temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
+            arr[i]   = arr[j];
+            arr[j]   = temp;
         }
     }
 
-    int temp = arr[i + 1];
+    int temp   = arr[i + 1];
     arr[i + 1] = arr[end];
-    arr[end] = temp;
+    arr[end]   = temp;
 
     int anchorIndex = i + 1;
 
@@ -37,7 +37,7 @@ void printArray(int arr[], int size, const std::string& message) {
 }
 
 int main() {
-    const int size = 10;
+    const int size  = 10;
     int array[size] = {5, 34, 57, 86, 3, 87, 43, 25, 11, 14};
 
     printArray(array, size, "Source array: ");
