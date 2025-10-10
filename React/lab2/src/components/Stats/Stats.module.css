@@ -1,0 +1,33 @@
+/* src/components/Stats/Stats.module.css */
+
+.statsContainer {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 1rem;
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.progressContainer {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.progressBar {
+    background-color: #007bff;
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}

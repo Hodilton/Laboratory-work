@@ -1,0 +1,14 @@
+/* src/components/TaskList/TaskList.module.css */
+
+.listContainer {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 1rem;
+    margin-top: 1rem;
+}
+
+.emptyMessage {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}

@@ -1,0 +1,25 @@
+/* src/components/TaskForm/TaskForm.module.css */
+
+.form {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 1rem;
+    padding: 0.5rem;
+}
+
+.input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.select {
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+}
