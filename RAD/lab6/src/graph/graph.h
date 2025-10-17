@@ -12,7 +12,7 @@ private:
     std::vector<std::vector<int>> adjacencyMatrix;
     int n;
 
-private:
+public:
     bool isValidMatrix() const;
 
     bool isSimple() const;
