@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <thread>
-#include <atomic>
+#include <mutex>
 
 class MatrixMultiplier {
 public:
@@ -25,7 +25,8 @@ private:
 
     const size_t numThreads_;
 
-    std::atomic<size_t> nextIndex;
+    size_t nextIndex;      // текущий индекс элемента (i,j)
+    std::mutex indexMutex; // мьютекс для синхронизации доступа к nextIndex
     std::vector<std::thread> workers;
 };
 

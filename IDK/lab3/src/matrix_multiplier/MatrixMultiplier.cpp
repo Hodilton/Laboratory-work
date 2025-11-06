@@ -64,12 +64,18 @@ void MatrixMultiplier::printResult() {
 
 void MatrixMultiplier::worker(size_t id) {
     while (true) {
-        size_t idx = nextIndex.fetch_add(1);
-        if (idx >= m_ * k_)
-            break;
+        size_t i, j;
 
-        size_t i = idx / k_;
-        size_t j = idx % k_;
+        // Критическая секция: выбор следующего элемента для вычисления
+        {
+            std::lock_guard<std::mutex> lock(indexMutex);
+            if (nextIndex >= m_ * k_) {
+                break; // все элементы вычислены
+            }
+            size_t idx = nextIndex++;
+            i          = idx / k_;
+            j          = idx % k_;
+        }
 
         // Задержка для симуляции вычислений
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
@@ -80,6 +86,9 @@ void MatrixMultiplier::worker(size_t id) {
         }
         C_[i][j] = sum;
     }
+
+    // Сообщение о завершении работы потока
+    // std::cout << "Thread " << id << " finished.\n";
 }
 
 void MatrixMultiplier::writeToFile() {
